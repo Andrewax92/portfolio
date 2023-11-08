@@ -1,0 +1,125 @@
+/* 
+header{
+
+    height: 80vh;
+    position: relative;
+
+
+} */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+}
+.header_list-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_list-names-extra {
+  color: var(--color-primary);
+  margin-left: 2rem;
+}
+.header_list-names > h3 {
+  align-self: center;
+}
+
+.header_list-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  height: 19rem;
+  width: 19rem;
+  border-radius: 50%;
+}
+.header_list-image > img {
+  height: 21rem;
+  width: 21rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  border-radius: 5px;
+}
+.header_socials-container {
+  position: absolute;
+  left: 5%;
+  top: 32rem;
+}
+.header_socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header_socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background-color: var(--color-primary);
+}
+.header-socials-scroll {
+  position: absolute;
+  left: 90%;
+  top: 34rem;
+  transform: rotate(90deg);
+}
+/* Media Queries (medium devices)devices */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+  .header_list-names > h1 {
+    font-size: 2.8rem;
+  }
+  .header_list-names > h3 {
+    font-size: 1.9rem;
+  }
+}
+/* Media Queries small screens */
+@media screen and (max-width: 600px) {
+  .header {
+    height: 80vh;
+  }
+  .header-socials-scroll {
+    display: none;
+  }
+  .header_socials-container {
+    display: none;
+  }
+
+  .header_list-names > h1 {
+    font-size: 2.7rem;
+  }
+  .header_list-names > h3 {
+    font-size: 1.7rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* .container :nth-child(2) {order: 1} */
+
+  .header_list-image {
+    order: -1;
+    height: 15rem;
+    width: 15rem;
+    /* margin-top: 5rem; */
+    /* margin-bottom: 2rem; */
+  }
+  .header_list-image > img {
+    height: 17rem;
+    width: 17rem;
+  }
+  .header_list-names-extra {
+    margin-left: 0.75rem;
+  }
+}

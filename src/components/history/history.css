@@ -1,0 +1,148 @@
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 30px auto;
+  color: black;
+}
+
+#skills-header {
+  margin-top: 0rem;
+  text-align: center;
+  color: var(--color-primary);
+  padding: 1rem;
+}
+#skills-header-2 {
+  color: white;
+  padding: 2rem;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/* .history_container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  /* opacity: 0; Set initial opacity to 0 */
+/* transform: translateY(0px); Set initial Y translation */
+/* transition: opacity 0.5s ease, transform 0.5s ease; */
+/* } */
+.history_container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  transform: translateX(-100%); /* Initial position: outside of the left side */
+  transition: transform 2s ease;
+}
+.text-box {
+  padding: 20px 30px;
+  background: white;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+  /* opacity: 0; Set initial opacity to 0 */
+  transform: translateY(20px); /* Set initial Y translation */
+  /* transition: opacity 0.5s ease, transform 0.5s ease; */
+}
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+}
+.history_container img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 100;
+}
+.right-container img {
+  left: -20px;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+.text-box h2 {
+  font-weight: 600;
+}
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid white;
+  right: -15px;
+}
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid white;
+  left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+  #history {
+    margin-top: 50rem;
+  }
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .history_container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box {
+    font-size: 10px;
+  }
+  .text-box small {
+    margin-bottom: 5px;
+  }
+  .right-container {
+    left: 0;
+  }
+  .left-container img,
+  .right-container img {
+    left: 10px;
+  }
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+}
